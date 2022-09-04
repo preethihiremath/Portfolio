@@ -15,14 +15,14 @@ return (
     <div className={classes.skills}>
  
     <div className={classes.design}> 
-            <div className={classes.list} style={{color:darkState? '#fff': '#000',boxShadow:darkState? '0 0 0 2px #90afff ':'0 0 0 2px black'}}>
+            <div className={classes.list} style={{color:darkState? '#fff': '#000',boxShadow:darkState? '0 0 0 2px #68D4A4 ':'0 0 0 2px black'}}>
                 <LayersIcon />
             <h1>Design and Development</h1>
             <p className={classes.listElement}>Clean modern design optimized for performance and search engines</p>
             </div>
         </div>
         <div className={classes.responsive}> 
-            <div className={classes.list} style={{color:darkState? '#fff': '#000',boxShadow:darkState? '0 0 0 2px #90afff ':'0 0 0 2px black'}}>
+            <div className={classes.list} style={{color:darkState? '#fff': '#000',boxShadow:darkState? '0 0 0 2px #68D4A4 ':'0 0 0 2px black'}}>
                 <MobileFriendlyIcon />
             <h1>Mobile-Friendly</h1>
             <p className={classes.listElement}>Responsive websites built for an optimal user experience that achieves your business goals.</p>
@@ -30,7 +30,7 @@ return (
         </div>
 
         <div className={classes.seo}> 
-            <div className={classes.list} style={{color:darkState? '#fff': '#000',boxShadow:darkState? '0 0 0 2px #90afff ':'0 0 0 2px black'}}>
+            <div className={classes.list} style={{color:darkState? '#fff': '#000',boxShadow:darkState? '0 0 0 2px #68D4A4 ':'0 0 0 2px black'}}>
             <YoutubeSearchedForIcon />
             <h1>Performance and SEO</h1>
             <p className={classes.listElement}>Make your website fast, easy to find, and reach the widest audience possible.</p>

@@ -15,7 +15,7 @@ const NavBar =({darkState,handleThemeChange})=>{
         <Toolbar className={classes.navbar}>
           <div className={classes.navbarBrand}>
             <AcUnitIcon  style={{fontSize:'30px'}}/>
-             <Typography variant="h6" style={{marginLeft:'30px'}}>Preethi</Typography>
+             <Typography variant="h6" style={{marginLeft:'30px'}}>My Portfolio</Typography>
           </div>
             <ul className={classes.navbarMenu}>
               <li><a href="#hero" className={classes.navLink} style={{color:darkState? 'white': 'black'}}>Home</a> </li>

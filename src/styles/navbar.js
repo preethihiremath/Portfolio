@@ -16,7 +16,7 @@ navbarMenu :{
     
 },
 navLink :{
-    
+    fontFamily:'sans-serif',
     textDecoration:'none',
     margin:'0 2rem',
     fontSize:'1rem',

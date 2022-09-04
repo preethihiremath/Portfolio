@@ -29,8 +29,9 @@ alignItems:'center'
 icon :{
 padding:'0.5rem',
 margin:'1rem',
-border:'1px solid white',
+border:'1px solid #68D4A4',
 borderRadius:'50%',
+backgroundColor:'#68D4A4'
 },
 iconEle :{
 color:'white'

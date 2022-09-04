@@ -13,7 +13,7 @@ heroText :{
 fontWeight:700,
 },
 p:{
-textShadow:'3px 3px red'
+textShadow:'3px 3px #68D4A4'
 },
 heading:{
 fontSize:'60px'
@@ -32,4 +32,5 @@ position:'relative',
 left:'-80px'
 }
 });
+
 export default useStyles;

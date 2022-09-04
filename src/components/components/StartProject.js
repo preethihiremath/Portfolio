@@ -9,9 +9,9 @@ const Contact =({darkTheme})=>{
     const showText = useMediaQuery(theme.breakpoints.up('md'));
     return (
    <section className={classes.start}>
-      <h1 classes={classes.heading}>Start A Project</h1>
-      { showText && <p classes={classes.para}>Intersted In working together? We should queue up a chat. I'll buy the coffee</p>}
-      <Button variant="contained" color="secondary" classes={classes.button}>Let's do this</Button>
+      <h1 classes={classes.heading}> Project On your mind ?</h1>
+      { showText && <p classes={classes.para}>Interested In working together for a project? We should discuss the tech stacks. I'll buy the coffee</p>}
+      <Button variant="contained" style={{backgroundColor:'#68D4A4'}}classes={classes.button} onClick={() => window.location = 'mailto:preethivhiremath.vh@gmail.com'}>Mail the Details</Button>
    </section>
     );
 }
