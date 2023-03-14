@@ -18,7 +18,7 @@ const NavBar =({darkState,handleThemeChange})=>{
              <Typography variant="h6" style={{marginLeft:'30px'}}>My Portfolio</Typography>
           </div>
             <ul className={classes.navbarMenu}>
-              <li><a href="#hero" className={classes.navLink} style={{color:darkState? 'white': 'black'}}>Home</a> </li>
+              <li><a href="#hero" className={classes.navLink} style={{color:darkState? 'white': 'black'}}>HOME</a> </li>
               <li><a href="#projects" className={classes.navLink} style={{color:darkState? 'white': 'black'}}>Projects</a> </li>
               <li><a href="#services" className={classes.navLink} style={{color:darkState? 'white': 'black'}}>Services</a> </li>
               <li><a href="#contact" className={classes.navLink} style={{color:darkState? 'white': 'black'}}>Contact</a> </li>
