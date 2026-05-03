@@ -1,143 +1,111 @@
-/**
- * Central place to edit portfolio copy, links, and project details.
- * Use `extended` on projects for extra bullets—they appear behind “More detail”.
- */
-
 export const person = {
   name: "Preethi Vijaykumar Hiremath",
-  title: "Software Engineer | Backend & Machine Learning",
+  shortName: "Preethi",
+  title: "Backend Engineer | ML Systems Engineer",
   tagline:
-    "Built high-performance financial systems at Deutsche Bank, now focused on ML and distributed systems",
+    "Backend engineer with 2+ years at Deutsche Bank, promoted to Senior Analyst in 15 months, specializing in high-performance distributed systems and machine learning applications.",
   email: "preethivhiremath.vh@gmail.com",
   linkedinUrl: "https://www.linkedin.com/in/preethivhirematha04a071b5/",
   githubUrl: "https://github.com/preethihiremath",
+  location: "Kaiserslautern, Germany",
+  workAuthorization: "Authorized to work in Germany (Student Visa)",
+  profileImagePath: "/preethi_pfp.jpg",
   resumePath: "/resume.pdf",
 };
 
-export type ProjectLink = {
-  label: string;
-  href: string;
-};
+export const summary =
+  "Backend engineer with 2+ years at Deutsche Bank, promoted to Senior Analyst in 15 months, reducing memory usage by 95% via microservices migration. Experience in building distributed financial systems across APAC, US, and EMEA. Applied machine learning experience including neural network training, dataset preparation, and LLM integration (Gemini 2.5 Flash). Open-source contributor with production tools including SnitchLint (VS Code OWASP scanner, 500+ installs) and BrainSurf (PyPI EEG processing library). Seeking Werkstudent role in Java, Spring Boot, Python, or Machine Learning systems.";
 
-export type Project = {
-  /** Stable key for lists */
-  id: string;
-  title: string;
-  /** Shown next to title, e.g. “Python · Library” */
-  kind?: string;
-  summary: string[];
-  /** Optional longer bullets—revealed behind an expand control */
-  extended?: string[];
-  links: ProjectLink[];
-  tags?: string[];
-};
+export const navItems = [
+  { href: "#about", label: "About" },
+  { href: "#projects", label: "Projects" },
+  { href: "#experience", label: "Experience" },
+  { href: "#contact", label: "Contact" },
+] as const;
 
-export const projects: Project[] = [
+export const skillLevels = [
+  { name: "Java", level: 5, label: "Expert" },
+  { name: "React.js", level: 5, label: "Expert" },
+  { name: "Python", level: 4, label: "Strong" },
+  { name: "SQL", level: 4, label: "Strong" },
+  { name: "Spring Boot", level: 5, label: "Expert" },
+  { name: "Node.js", level: 3, label: "Intermediate" },
+  { name: "Docker", level: 2, label: "Beginner" },
+  { name: "K8", level: 2, label: "Beginner" },
+  { name: "GCP", level: 2, label: "Intermediate" },
+  { name: "ML / AI", level: 4, label: "Intermediate" },
+] as const;
+
+export const experienceTimeline = [
+  {
+    role: "Senior Analyst",
+    company: "Deutsche India Pvt Ltd, Bangalore",
+    period: "Oct 2024 - Mar 2025",
+    points: [
+      "Migrated legacy Java/C++ systems to Spring Boot microservices, reducing memory usage by 95%.",
+      "Built real-time Oracle AQ messaging system enabling sub-second UI updates across APAC, US, and EMEA.",
+      "Designed REST + SOAP APIs with TDD/BDD, reducing defects by 30%.",
+      "Led SUSE Linux -> RHEL 9 migration resolving toolchain issues across 8 production pipelines.",
+      "SME for mission-critical systems maintaining 99.9%+ SLA.",
+    ],
+  },
+  {
+    role: "Graduate Analyst",
+    company: "Deutsche India Pvt Ltd, Bangalore",
+    period: "Jul 2023 - Oct 2024",
+    points: [
+      "Optimized Oracle SQL using GTT, stored procedures, and UDTs improving performance by 20%+.",
+      "Built ETL pipelines connecting 6 financial systems with thread-safe reconciliation logic.",
+      "Contributed to Oracle Exadata (ExaCC) migration reducing query latency by 15%.",
+    ],
+  },
+  {
+    role: "Web Intern",
+    company: "Luxeveda Brand Services",
+    period: "Apr 2023 - Jun 2023",
+    points: [
+      "Built Node.js MQTT backend enabling real-time IoT communication across 50+ devices.",
+      "Achieved sub-100ms latency for air-quality monitoring system (Praan hardware).",
+    ],
+
+  },
+  {
+    role: "React Developer Intern",
+    company: "Inovact Pvt Ltd",
+    period: "August 2021 - November 2021",
+    points: [
+      "Built 15+ responsive {React.js} components using hooks and state management for a component-driven production UI reduced page load time by 20\% and improved backend API integration",
+      "Collaborated with designers and backend developers to translate {UI/UX} wireframes into functional, scalable interface features.",
+    ],
+
+  },
+] as const;
+
+export const projects = [
   {
     id: "brainsurf",
     title: "BrainSurf",
-    kind: "Python library",
-    summary: [
-      "EEG signal processing toolkit for research workflows.",
-      "Filtering, epoch extraction, and ERP computation out of the box.",
+    impact: "Open-source cognitive neuroscience toolkit for practical EEG workflows.",
+    bullets: [
+      "PyPI EEG signal processing library.",
+      "Bandpass filtering, epoch extraction, and feature engineering.",
+      "no-code app for cognitive neuroscience experiments",
     ],
-    extended: [
-      "Replace this bullet with datasets you validated against, benchmarks, or paper links.",
-      "Add citation text or PyPI badge once published.",
-    ],
-    links: [
-      {
-        label: "GitHub",
-        href: "https://github.com/preethihiremath",
-      },
-    ],
-    tags: ["Python", "Signal processing", "Research"],
+    links: [{ label: "GitHub", href: "https://github.com/preethihiremath" }],
+    tags: ["Python", "PyPI", "EEG", "Signal Processing"],
   },
   {
     id: "snitchlint",
     title: "SnitchLint",
-    kind: "VS Code extension",
-    summary: [
-      "Static security analysis inside the editor.",
-      "AST-based checks aligned with OWASP categories.",
+    impact: "Security-first developer tooling.",
+    bullets: [
+      "A developer first static security analysis engine for JS/TS using the TypeScript AST",
+      "Implemented a taint/dataflow analysis system that Tracks propagation across assignments, expressions, and function calls and Supports parameter seeding to detect vulnerabilities across helper functions",
+      "Detects OWASP Top 10-inspired vulnerabilities (XSS, SQLi, SSRF, secrets, command injection, weak crypto)",
+      "Integrated directly into VS Code Problems panel with stable rule codes and remediation hints",
+      "Designed extensible rule engine architecture with typed models and test coverage"
     ],
-    extended: [
-      "List rules covered (e.g. injection sinks, secrets in code).",
-      "Note marketplace slug or VSIX download once live.",
-    ],
-    links: [
-      {
-        label: "GitHub",
-        href: "https://github.com/preethihiremath",
-      },
-    ],
-    tags: ["TypeScript", "Security", "AST"],
+    links: [{ label: "GitHub", href: "https://github.com/preethihiremath" }],
+    tags: ["TypeScript", "OWASP", "VS Code", "ESLint"],
   },
-  {
-    id: "ml-breast-cancer",
-    title: "Breast cancer classification",
-    kind: "ML · Classification",
-    summary: [
-      "End-to-end model for tumour classification.",
-      "Emphasis on preprocessing, evaluation metrics, and interpretability.",
-    ],
-    extended: [
-      "Describe dataset source, validation strategy, and best test scores here.",
-      "Link a notebook repository or Hugging Face space if applicable.",
-    ],
-    links: [
-      {
-        label: "GitHub",
-        href: "https://github.com/preethihiremath",
-      },
-    ],
-    tags: ["Python", "TensorFlow", "Healthcare ML"],
-  },
-  {
-    id: "ml-translator",
-    title: "English–French translator",
-    kind: "LSTM · Flask",
-    summary: [
-      "Sequence model for neural machine translation.",
-      "Served behind a lightweight Flask web app.",
-    ],
-    extended: [
-      "Mention corpus size, BLEU scores, deployment URL, or demo GIF.",
-      "Add training hardware and training time if useful for recruiters.",
-    ],
-    links: [
-      {
-        label: "GitHub",
-        href: "https://github.com/preethihiremath",
-      },
-    ],
-    tags: ["LSTM", "Flask", "NLP"],
-  },
-];
-
-export const skillGroups = [
-  {
-    label: "Backend",
-    items: ["Java", "Spring Boot", "Node.js"],
-  },
-  {
-    label: "Frontend",
-    items: ["React"],
-  },
-  {
-    label: "ML",
-    items: ["Python", "TensorFlow", "Keras"],
-  },
-  {
-    label: "Tools",
-    items: ["Docker", "CI/CD", "Git", "Geneos"],
-  },
-];
-
-export const navItems = [
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
-  { href: "#contact", label: "Contact" },
 ] as const;

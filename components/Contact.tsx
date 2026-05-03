@@ -7,11 +7,13 @@ export function Contact() {
         <h2 id="contact-heading" className="font-serif text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
           Contact
         </h2>
-        <p className="mt-3 max-w-xl text-muted">Open to software engineering roles and research collaborations.</p>
+        <p className="mt-3 max-w-xl text-muted">
+          Let&apos;s build something solid together 🚀 Open to Werkstudent + backend/ML roles across Germany and Europe 🌍
+        </p>
 
-        <ul className="mt-10 flex flex-col gap-4 text-base font-medium">
+        <ul className="mt-8 flex flex-col gap-4 rounded-2xl border border-accent-soft bg-surface-soft p-5 text-base font-medium">
           <li>
-            <span className="text-sm font-semibold uppercase tracking-wide text-muted">Email</span>
+            <span className="text-sm font-semibold uppercase tracking-wide text-muted">Email 📬</span>
             <br />
             <a
               className="text-accent-strong underline decoration-accent-soft underline-offset-4 transition hover:text-accent-hover"
@@ -21,7 +23,7 @@ export function Contact() {
             </a>
           </li>
           <li>
-            <span className="text-sm font-semibold uppercase tracking-wide text-muted">LinkedIn</span>
+            <span className="text-sm font-semibold uppercase tracking-wide text-muted">LinkedIn 💼</span>
             <br />
             <a
               href={person.linkedinUrl}
@@ -33,7 +35,7 @@ export function Contact() {
             </a>
           </li>
           <li>
-            <span className="text-sm font-semibold uppercase tracking-wide text-muted">GitHub</span>
+            <span className="text-sm font-semibold uppercase tracking-wide text-muted">GitHub 👩‍💻</span>
             <br />
             <a
               href={person.githubUrl}

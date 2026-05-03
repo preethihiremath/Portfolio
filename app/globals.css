@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  --background: #0f0f1a;
+  --foreground: #e5e7eb;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-muted: #475569;
-  --color-border-muted: #e2e8f0;
-  --color-border-strong: #cbd5e1;
-  --color-surface-soft: #f1f5f9;
-  --color-surface-muted: #eef2ff;
-  --color-accent: #0d9488;
-  --color-accent-hover: #0f766e;
-  --color-accent-strong: #115e59;
-  --color-accent-muted: color-mix(in srgb, #ccfbf1 85%, transparent);
-  --color-accent-soft: color-mix(in srgb, #5eead4 45%, transparent);
-  --color-ring: #14b8a6;
+  --color-muted: #aeb4c2;
+  --color-border-muted: #2a2a3f;
+  --color-border-strong: #3b3b58;
+  --color-surface-soft: #1a1a2e;
+  --color-surface-muted: #161625;
+  --color-accent: #a78bfa;
+  --color-accent-hover: #f472b6;
+  --color-accent-strong: #c4b5fd;
+  --color-accent-muted: color-mix(in srgb, #a78bfa 16%, transparent);
+  --color-accent-soft: color-mix(in srgb, #22d3ee 26%, transparent);
+  --color-ring: #22d3ee;
   --font-sans: var(--font-ibm-sans), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-literata), ui-serif, Georgia, "Times New Roman", serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -38,4 +38,18 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+}
+
+/* Soft dashboard grid texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(ellipse at top, black 25%, transparent 75%);
+  z-index: -1;
 }

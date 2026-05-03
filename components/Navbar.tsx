@@ -8,15 +8,14 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border-muted bg-background/85 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-border-muted bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <Link
           href="#top"
-          className="shrink-0 text-sm font-semibold tracking-tight text-foreground transition-colors hover:text-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:text-base"
+          className="shrink-0 text-sm font-semibold tracking-tight text-accent transition-colors hover:text-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:text-base"
           onClick={() => setOpen(false)}
         >
-          {person.name.split(" ")[0]}{" "}
-          <span className="text-muted">Hiremath</span>
+          {person.shortName}
         </Link>
 
         <nav aria-label="Primary" className="hidden md:flex md:items-center md:gap-1">
@@ -24,14 +23,14 @@ export function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-md px-3 py-2 text-sm font-medium text-muted transition-colors hover:bg-surface-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="rounded-md px-3 py-2 text-sm font-medium text-muted transition-colors hover:bg-surface-soft hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               {item.label}
             </Link>
           ))}
           <Link
             href="#projects"
-            className="ml-2 rounded-md bg-accent px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="ml-2 rounded-md bg-accent px-4 py-2 text-sm font-semibold text-background shadow-sm transition hover:bg-accent-hover hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             View projects
           </Link>
@@ -41,7 +40,7 @@ export function Navbar() {
           type="button"
           aria-expanded={open}
           aria-controls="mobile-nav"
-          className="inline-flex items-center justify-center rounded-md border border-border-muted bg-surface-muted p-2 text-foreground md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          className="inline-flex items-center justify-center rounded-md border border-border-muted bg-surface-soft p-2 text-foreground md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           onClick={() => setOpen((v) => !v)}
         >
           <span className="sr-only">Toggle navigation</span>
@@ -71,7 +70,7 @@ export function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-lg px-3 py-3 text-base font-medium text-foreground hover:bg-surface-muted"
+              className="rounded-lg px-3 py-3 text-base font-medium text-foreground hover:bg-surface-soft"
               onClick={() => setOpen(false)}
             >
               {item.label}
@@ -79,7 +78,7 @@ export function Navbar() {
           ))}
           <Link
             href="#projects"
-            className="mt-2 rounded-lg bg-accent px-3 py-3 text-center text-base font-semibold text-white hover:bg-accent-hover"
+            className="mt-2 rounded-lg bg-accent px-3 py-3 text-center text-base font-semibold text-background transition hover:bg-accent-hover hover:text-white"
             onClick={() => setOpen(false)}
           >
             View projects
